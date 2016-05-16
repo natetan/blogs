@@ -24,7 +24,17 @@ router.route('/')
             if (err) {
                 res.send(err);
 			}
-            res.json(blogs);
+			/*
+			for(var i = 0; i < blogs.length; i++) {
+				res.render('blogs', {
+					title: blogs[i].title,
+					author: blogs[i].author,
+					body: blogs[i].body,
+				});
+			}
+			*/
+			console.log("blogs length: " + blogs.length);
+			res.json(blogs);
         });
     });
 
