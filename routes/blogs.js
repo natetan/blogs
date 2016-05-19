@@ -51,7 +51,25 @@ router.route('/:blog_id')
 				author: blog.author,
 				body: blog.body,
 			});
-		})
+		});
+	})
+
+	.put(function(req, res) {
+		Blog.findById(req.params.blog_id, function(err, blog) {
+			if (err) {
+				res.send(err);
+			}
+			blog.title = req.body.title;
+			blog.author = req.body.author;
+			blog.body = req.body.body;
+
+			blog.save(function(err) {
+				if (err) {
+					res.send(err);
+				}
+				res.json({ message: 'blog updated'});
+			});
+		});
 	})
 
 module.exports = router;
