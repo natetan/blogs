@@ -72,4 +72,13 @@ router.route('/:blog_id')
 		});
 	})
 
+	.delete(function(req, res) {
+		Blog.remove({_id: req.params.blog_id}, function(err, blog) {
+			if (err) {
+				res.send(err);
+			}
+			res.json({ message: 'blog deleted!'});
+		});
+	});
+
 module.exports = router;
