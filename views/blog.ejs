@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>Blogs</title>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-    <h1><%= title %></h1>
-    <h4>Author: <%= author %></h4>
-    <div><%= body %></div>
+  <body>
+  	<div class="info bg-success">
+	    <h1 id="title"><%= title %></h1>
+	    <h2 id="author">Author: <%= author %></h2>
+	    <div id="desc"><%= body %></div>
+    </div>
   </body>
 </html>

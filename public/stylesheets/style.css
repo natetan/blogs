@@ -1,8 +1,27 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px Calibri, Helvetica, Arial, sans-serif;
+  background: url('../images/grumpy.jpg');
+  background-size: 20%;
 }
 
 a {
   color: #00B7FF;
+}
+
+.info {
+	width: 80%;
+	margin: 3% auto 3% auto;
+	padding: 3%;
+	border-radius: 20px;
+}
+
+#title, #author, #desc {
+	text-align: center;
+}
+
+#desc {
+	font-size: 31px;
+	font-style: italic;
+	margin-top: 21px;
 }
